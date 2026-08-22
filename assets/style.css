@@ -1,0 +1,96 @@
+
+:root{--paper:#f1f0e9;--ink:#252724;--navy:#233f59;--link:#174c8f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:#d8d9d3;
+  font-family:"MS PGothic","MS Gothic","Yu Gothic",Meiryo,sans-serif;
+  font-size:16px;line-height:1.8;
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.18) 0,rgba(255,255,255,.18) 1px,transparent 1px,transparent 4px)
+}
+a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
+a:visited{color:#5a3c76}
+a:focus-visible{outline:2px solid #9b261c;outline-offset:3px}
+.site-shell{width:min(900px,calc(100% - 24px));margin:18px auto;background:var(--paper);border:1px solid #878b85;box-shadow:0 1px 5px #0004}
+.site-header{position:relative;padding:26px 30px 24px;border-bottom:5px double #62665f;background:linear-gradient(105deg,#e9e8df,#f8f7f1 62%,#dedfd8)}
+.header-rule{position:absolute;inset:7px 8px auto;height:1px;background:#999b95}
+.archive-label{margin:0 0 2px;color:#555951;font-size:12px;letter-spacing:.18em}
+.site-header h1{margin:0;color:#1f2d38;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(32px,5vw,48px);font-weight:500;letter-spacing:.16em;text-shadow:1px 1px #fff}
+.subtitle{margin:1px 0 0 3px;color:#64675f;font-size:13px;letter-spacing:.08em}
+.page-grid{display:grid;grid-template-columns:190px 1fr}
+.side-menu{padding:22px 14px 30px;background:#e4e4dd;border-right:1px solid #aaa}
+.side-menu h2{margin:0;padding:4px 7px;color:#fff;background:var(--navy);border:1px solid #172a3c;font-size:14px;font-weight:normal;letter-spacing:.1em}
+.side-menu nav{border:1px solid #a8aaa4;border-top:0;background:#f5f4ee}
+.side-menu nav a,.side-menu nav span{display:block;min-height:38px;padding:7px 10px;border-bottom:1px dotted #aaa;font-size:14px}
+.side-menu nav .current{color:#222;background:#dadbd4;font-weight:bold;text-decoration:none}
+.dead-link{color:#777;text-decoration:line-through}
+.side-box{margin-top:22px;border:1px solid #aaa;background:#f4f3ed}
+.side-box h3{margin:0;padding:3px 7px;background:#cccdc7;border-bottom:1px solid #aaa;font-size:13px}
+.side-box p{margin:0;padding:8px;font-size:12px;line-height:1.65}
+.counter-box{margin-top:24px;text-align:center;color:#565952;font-size:11px;line-height:1.5}
+.counter-box p{margin:2px}
+.counter-digits{display:inline-block;padding:1px 5px;color:#d7e2d5;background:#151916;border:2px inset #777;font:16px/1.25 "Courier New",monospace;letter-spacing:.15em;text-shadow:0 0 3px #89a789}
+.content{min-width:0;padding:28px 30px 36px;background:#faf9f4c7}
+.intro-panel{padding:16px 19px;border:1px solid #a7aaa3;background:#fbfaf5;box-shadow:inset 0 0 12px #28281e0d}
+.intro-panel h2,.section-heading h2,.article-body h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
+.intro-panel h2{margin:0 0 11px;padding-bottom:5px;border-bottom:1px dotted #969991;color:#273d50;font-size:19px}
+.intro-panel p{margin:9px 0}
+.warning{color:#6a211c;font-size:13px;font-weight:bold}
+.archive-note{margin-top:11px;padding-top:9px;border-top:1px dotted #aaa;color:#666;font-size:12px}
+.section-block{margin-top:28px}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--navy)}
+.section-heading h2{margin:0;padding:2px 8px;color:#fff;background:var(--navy);font-size:17px;font-weight:normal;letter-spacing:.08em}
+.section-heading>span{color:#666;font-size:12px}
+.record-list{border:1px solid #aaa;border-top:0;background:#fbfaf6}
+.record{display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:12px;min-height:62px;padding:8px 11px;border-bottom:1px dotted #a4a59e;text-decoration:none}
+.record:last-child{border-bottom:0}
+.record:hover{background:#eeeee7}
+.record-meta{display:flex;flex-direction:column;color:#565952;font-size:11px;line-height:1.5}
+.record-meta span{width:max-content;margin-top:2px;padding:0 4px;color:#fff;background:#68717a}
+.record-title>span{color:var(--link);text-decoration:underline}
+.record small{color:#70736c;font-size:11px;white-space:nowrap}
+.new{margin-left:7px;color:#b3261e;font:bold 10px Arial}
+.memo{padding:0 15px 13px;border:1px solid #aaa;background:#efeee7}
+.memo .section-heading{margin:0 -15px 13px}
+.memo p{margin:7px 0}
+.memo-date{color:#686b64;font-size:12px}
+.signature{text-align:right;color:#555;font-size:13px}
+.update-log dl{margin:0;padding:9px 12px;border:1px solid #aaa;border-top:0;background:#fbfaf6}
+.update-log dl div{display:grid;grid-template-columns:110px 1fr;padding:3px 0;font-size:13px}
+.update-log dt{font-family:"Courier New",monospace;color:#555}
+
+/* article */
+.breadcrumbs{margin:0 0 13px;color:#666;font-size:12px}
+.article-head{margin-bottom:24px;border-bottom:3px double #62665f}
+.article-head .kind{display:inline-block;margin-bottom:6px;padding:1px 7px;color:#fff;background:#68717a;font-size:11px}
+.article-head h2{margin:0 0 7px;color:#263b4d;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(24px,4vw,31px);font-weight:500;line-height:1.5}
+.article-date{margin:0 0 12px;color:#70736c;font:12px "Courier New","MS Gothic",monospace}
+.article-body p{margin:0 0 1.05em}
+.article-body h2{margin:28px 0 13px;padding:3px 8px;border-left:5px solid var(--navy);background:#e7e7df;color:#273d50;font-size:19px;font-weight:500}
+.article-body blockquote{margin:20px 10px;padding:10px 15px;border:1px solid #b5b6af;border-left:5px solid #767b75;background:#f1f0e9;font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
+.article-body strong{color:#1f2d38}
+.log-box{margin:18px 0;padding:13px 15px;border:1px solid #8e918a;background:#e3e4dd;color:#252724;font:13px/1.75 "MS Gothic","Courier New",monospace;white-space:pre-wrap}
+.related{margin-top:34px;border:1px solid #aaa;background:#f0efe8}
+.related h3{margin:0;padding:4px 8px;color:#fff;background:var(--navy);font-size:13px;font-weight:normal}
+.related ul{margin:8px 10px 9px;padding-left:22px}
+.related li{margin:3px 0;font-size:13px}
+.return-top{margin-top:26px;font-size:13px}
+.status-note{padding:9px 12px;border:1px dashed #999;background:#f2f0e8;color:#60635d;font-size:12px}
+
+footer{padding:24px 20px;border-top:1px solid #aaa;background:#dedfd8;text-align:center;color:#5a5d57;font-size:12px;line-height:1.6}
+footer p{margin:2px}.copyright{margin-top:15px;color:#71746d;font-size:10px}
+
+@media(max-width:680px){
+ body{font-size:16px;background:var(--paper)}
+ .site-shell{width:100%;margin:0;border:0;box-shadow:none}
+ .site-header{padding:24px 18px 19px}.archive-label{font-size:11px;letter-spacing:.1em}
+ .site-header h1{font-size:34px;letter-spacing:.09em}.subtitle{font-size:12px}
+ .page-grid{display:block}.side-menu{padding:12px 14px 15px;border-right:0;border-bottom:1px solid #aaa}
+ .side-menu nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .side-menu nav a,.side-menu nav span{display:flex;align-items:center;min-height:44px;border-right:1px dotted #aaa}
+ .side-box{display:none}.counter-box{margin-top:13px}.content{padding:22px 15px 30px}
+ .intro-panel{padding:14px}.section-heading{align-items:flex-end}.section-heading>span{padding-bottom:3px;font-size:10px}
+ .record{grid-template-columns:92px 1fr;gap:8px;min-height:72px;padding:9px}.record small{display:none}.record-title{line-height:1.55}
+ .update-log dl div{grid-template-columns:92px 1fr}.article-head h2{font-size:25px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
