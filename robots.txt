@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://cmedia-creator.github.io/404-room/sitemap.xml
